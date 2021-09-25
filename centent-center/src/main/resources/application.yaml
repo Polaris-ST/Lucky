@@ -1,0 +1,108 @@
+#rocketmq:
+#  name-server: 8.142.133.95:9876
+#  #小坑 指定group
+#  producer:
+#    group: test-group
+spring:
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server:  8.142.133.95:9876
+        bindings:
+          output:
+            producer:
+              #是否开启事务：
+              transactional: true
+              #与事务绑定的组
+              group: tx-add-bonus-group
+      bindings:
+        #input和output针对微服务来说是生产消息还是消费消息
+        output:
+          #指定主题
+          destination: add-bonus
+
+
+
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      #      指定控制台host和post
+      transport:
+        dashboard: localhost:8080
+        #端点保护
+  #      filter:
+  #        enabled: false
+
+
+
+
+  #        enabled: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin321
+    url: jdbc:mysql://8.142.133.95:3306/content_center
+
+  application:
+    name: centent-center
+
+
+  main:
+    allow-bean-definition-overriding: true
+  zipkin:
+    base-url: http://8.142.133.95:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
+mybatis-plus:
+  type-aliases-package: com.itmuch.cententcenter.entity
+  mapper-locations: classpath:com/itmuch/cententcenter/mapper/xml/*.xml
+server:
+  port: 8020
+#  user-center:
+#    ribbon:
+#      NFLoadBalancerRuleClassName: 相应规则的全路径
+#开启日志
+logging:
+  level:
+    #将feign的全路径添加上
+    com.itmuch.cententcenter.feignClients.UserCenterFeignClient: debug
+
+feign:
+  client:
+    config:
+      # feign全局日志级别
+      default:
+        loggerLevel: full
+        requestInterceptors:
+          - com.itmuch.cententcenter.feignClients.interceptor.TokenRelayRequestInterceptor
+  #开启feignClient的sentinal
+  #  sentinel:
+  #   enabled: true
+
+  httpclient:
+    #让feign用httpclient做请求，而不是默认的urlconnert
+    enabled: true
+    #feign最大连接数
+    max-connections: 200
+    #feign路径的最大连接数
+    max-connections-per-route: 50
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+
+#阿里的控制台
+#ahas.namespace: default
+#project.name: content-center
+##ahas.license: 871e5e7cd5f949ccabf9962e1f87dd8c
+jwt:
+  secret: sb
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600

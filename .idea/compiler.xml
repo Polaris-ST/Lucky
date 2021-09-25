@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gateway" />
+        <module name="mygateway" />
+        <module name="my-gateway" />
+        <module name="adminservice" />
+        <module name="centent-center" />
+        <module name="gateways" />
+        <module name="user-center" />
+        <module name="admin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin" target="1.8" />
+      <module name="adminservice" target="1.8" />
+      <module name="centent-center" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="gateways" target="1.8" />
+      <module name="itmuch" target="1.8" />
+      <module name="my-gateway" target="1.8" />
+      <module name="mygateway" target="1.8" />
+      <module name="user-center" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="adminservice" options="-parameters" />
+      <module name="centent-center" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="gateways" options="-parameters" />
+      <module name="itmuch" options="-parameters" />
+      <module name="my-gateway" options="-parameters" />
+      <module name="mygateway" options="-parameters" />
+      <module name="user-center" options="-parameters" />
+    </option>
+  </component>
+</project>

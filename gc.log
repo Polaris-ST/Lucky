@@ -1,0 +1,28 @@
+Java HotSpot(TM) 64-Bit Server VM (25.101-b13) for windows-amd64 JRE (1.8.0_101-b13), built on Jun 22 2016 01:21:29 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16119108k(8409748k free), swap 17626436k(7148920k free)
+CommandLine flags: -XX:-BytecodeVerificationLocal -XX:-BytecodeVerificationRemote -XX:InitialHeapSize=257905728 -XX:+ManagementServer -XX:MaxHeapSize=4126491648 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:TieredStopAtLevel=1 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC 
+1.122: [GC (Allocation Failure) [PSYoungGen: 63488K->9416K(73728K)] 63488K->9432K(241664K), 0.0068908 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+1.412: [GC (Allocation Failure) [PSYoungGen: 72904K->9891K(73728K)] 72920K->9915K(241664K), 0.0092970 secs] [Times: user=0.17 sys=0.03, real=0.01 secs] 
+1.614: [GC (Allocation Failure) [PSYoungGen: 73379K->6922K(73728K)] 73403K->6954K(241664K), 0.0038796 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+1.894: [GC (Metadata GC Threshold) [PSYoungGen: 65810K->9279K(137216K)] 65842K->9319K(305152K), 0.0062667 secs] [Times: user=0.00 sys=0.02, real=0.01 secs] 
+1.900: [Full GC (Metadata GC Threshold) [PSYoungGen: 9279K->0K(137216K)] [ParOldGen: 40K->8806K(94720K)] 9319K->8806K(231936K), [Metaspace: 20530K->20529K(1067008K)], 0.0198733 secs] [Times: user=0.00 sys=0.00, real=0.02 secs] 
+3.206: [GC (Allocation Failure) [PSYoungGen: 126976K->9971K(137216K)] 135782K->18849K(231936K), 0.0067067 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+3.700: [GC (Allocation Failure) [PSYoungGen: 136947K->10811K(213504K)] 145825K->19697K(308224K), 0.0060057 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+4.911: [GC (Metadata GC Threshold) [PSYoungGen: 183680K->11773K(215040K)] 192566K->25388K(309760K), 0.0105560 secs] [Times: user=0.19 sys=0.02, real=0.01 secs] 
+4.921: [Full GC (Metadata GC Threshold) [PSYoungGen: 11773K->0K(215040K)] [ParOldGen: 13614K->21343K(151040K)] 25388K->21343K(366080K), [Metaspace: 34046K->34046K(1079296K)], 0.0431450 secs] [Times: user=0.13 sys=0.00, real=0.04 secs] 
+6.486: [GC (Allocation Failure) [PSYoungGen: 203264K->15342K(318464K)] 224607K->39498K(469504K), 0.0116632 secs] [Times: user=0.01 sys=0.01, real=0.01 secs] 
+7.606: [GC (Allocation Failure) [PSYoungGen: 318446K->17910K(329216K)] 342602K->52700K(480256K), 0.0168614 secs] [Times: user=0.00 sys=0.02, real=0.02 secs] 
+9.794: [GC (Allocation Failure) [PSYoungGen: 329206K->24570K(413184K)] 363996K->69061K(564224K), 0.0181952 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
+14.887: [GC (Allocation Failure) [PSYoungGen: 413178K->31220K(419840K)] 457669K->89013K(570880K), 0.0247063 secs] [Times: user=0.02 sys=0.00, real=0.03 secs] 
+15.054: [GC (Metadata GC Threshold) [PSYoungGen: 83715K->5285K(532992K)] 141509K->71004K(684032K), 0.0083715 secs] [Times: user=0.00 sys=0.01, real=0.01 secs] 
+15.062: [Full GC (Metadata GC Threshold) [PSYoungGen: 5285K->0K(532992K)] [ParOldGen: 65718K->41391K(209408K)] 71004K->41391K(742400K), [Metaspace: 56025K->55998K(1099776K)], 0.1098243 secs] [Times: user=0.66 sys=0.02, real=0.11 secs] 
+17.675: [GC (Allocation Failure) [PSYoungGen: 492544K->33541K(532992K)] 533935K->74940K(742400K), 0.0200221 secs] [Times: user=0.20 sys=0.00, real=0.02 secs] 
+Heap
+ PSYoungGen      total 532992K, used 263908K [0x000000076e000000, 0x000000079c480000, 0x00000007c0000000)
+  eden space 492544K, 46% used [0x000000076e000000,0x000000077c0f7b70,0x000000078c100000)
+  from space 40448K, 82% used [0x000000078c100000,0x000000078e1c1500,0x000000078e880000)
+  to   space 44032K, 0% used [0x0000000799980000,0x0000000799980000,0x000000079c480000)
+ ParOldGen       total 209408K, used 41399K [0x00000006ca000000, 0x00000006d6c80000, 0x000000076e000000)
+  object space 209408K, 19% used [0x00000006ca000000,0x00000006cc86dc08,0x00000006d6c80000)
+ Metaspace       used 64032K, capacity 67912K, committed 67928K, reserved 1107968K
+  class space    used 8666K, capacity 9328K, committed 9344K, reserved 1048576K

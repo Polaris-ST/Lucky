@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itmuch.cententcenter.mapper.MidUserShareMapper">
+
+    <select id="selectOneMidUserShare" resultType="com.itmuch.cententcenter.entity.MidUserShare">
+        select * from mid_user_share
+        <where>
+            <if test="shareId!=null and shareId!=''"> share_id=#{shareId} </if>
+             <if test="userId!=null and userId!=''"> and user_id=#{userId}</if>
+        </where>
+    </select>
+</mapper>

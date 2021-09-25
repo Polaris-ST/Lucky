@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itmuch.cententcenter.mapper.ShareMapper">
+
+    <!--    <update id="updateByIdSelective">-->
+    <!--        update share -->
+    <!--        <set>-->
+    <!--            <if test=""></if>-->
+    <!--        </set>-->
+    <!--    </update>-->
+    <update id="updateByIdSelective">
+        update share
+        <set>
+            <if test="auditStatus!=null">audit_status=#{auditStatus},</if>
+            <if test="reason!=null">reason=#{reason},</if>
+        </set>
+        <where>
+            id=#{id}
+        </where>
+    </update>
+    <select id="selectByParam" resultType="Share">
+          select * from  share
+          <where>
+              <if test="title!=null and title!=''">
+                  title like CONCAT('%',#{title},'%')
+              </if>
+              and audit_status = 'PASS'
+          </where>
+    </select>
+
+</mapper>

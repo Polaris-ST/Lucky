@@ -1,0 +1,60 @@
+
+spring:
+  zipkin:
+    base-url: http://8.142.133.95:9411/
+  sleuth:
+    sampler:
+#      抽样率，默认是0.1 （90%的数据会丢弃不上报） 性能好  为了测试改成1.0
+      probability: 1.0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin321
+    url: jdbc:mysql://8.142.133.95:3306/user_center
+
+  cloud:
+    nacos:
+      discovery:
+        #        指定nacos service 地址端口号
+        server-addr: localhost:8848
+
+    #服务名称  链接尽量用-
+    stream:
+      rocketmq:
+        binder:
+          name-server: 8.142.133.95:9876
+      bindings:
+        input:
+          #与生产者的主题要匹配
+          destination: add-bonus
+          #一定要设置 不然启动不起来
+          #其他mq可以留空
+          group: binder-group
+
+  application:
+    name: user-center
+
+
+
+#rocketmq:
+#  name-server: 8.142.133.95:9876
+
+mybatis-plus:
+  type-aliases-package: com.itmuch.usercenter.entity
+  mapper-locations: classpath:com/itmuch/usercenter/mapper/xml/*.xml
+
+jwt:
+  secret: sb
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600
+logging:
+  level:
+    com.springframework.cloud.sleuth: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

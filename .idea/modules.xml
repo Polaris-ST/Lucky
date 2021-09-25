@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin/admin.iml" filepath="$PROJECT_DIR$/admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adminservice/adminservice.iml" filepath="$PROJECT_DIR$/adminservice/adminservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centent-center/centent-center.iml" filepath="$PROJECT_DIR$/centent-center/centent-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-gateway/my-gateway.iml" filepath="$PROJECT_DIR$/my-gateway/my-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/centent-center/mygateway.iml" filepath="$PROJECT_DIR$/centent-center/mygateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-center/user-center.iml" filepath="$PROJECT_DIR$/user-center/user-center.iml" />
+    </modules>
+  </component>
+</project>

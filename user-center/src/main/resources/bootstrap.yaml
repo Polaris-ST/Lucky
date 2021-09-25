@@ -1,0 +1,13 @@
+
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+#        shared-dataids: common1.yaml
+#        refreshable-dataids: common1.yaml
+  application:
+    name: user-center
+  profiles:
+    active: dev

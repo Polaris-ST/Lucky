@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itmuch.usercenter.mapper.UserMapper">
+
+
+    <select id="selectOne" resultType="User">
+        select * from user where id= #{id}
+    </select>
+    <select id="selectByEntity" resultType="User">
+        select * from user
+        <where>
+            <if test="id!=null">id=#{id}</if>
+            <if test="wxId!=null">and wx_id=#{wxId}</if>
+            <if test="wxNickname!=null">and wx_nickname=#{wxNickname} and</if>
+            <if test="roles!=null">and roles=#{roles}</if>
+            <if test="avatarUrl!=null">and avatar_url=#{avatarUrl}</if>
+            <if test="createTime!=null">and create_time=#{createTime}</if>
+            <if test="updateTime!=null">and update_time=#{updateTime}</if>
+            <if test="bonus!=null">and bonus=#{bonus}</if>
+        </where>
+    </select>
+</mapper>
